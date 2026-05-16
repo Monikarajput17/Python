@@ -1,0 +1,47 @@
+{
+  "name": "hotel-management-saas",
+  "version": "1.0.0",
+  "description": "Production-ready Hotel Management & Booking SaaS application",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:admin\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev:admin": "cd admin-panel && npm run dev",
+    "build": "npm run build:server && npm run build:client && npm run build:admin",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build:admin": "cd admin-panel && npm run build",
+    "test": "npm run test:server && npm run test:client",
+    "test:server": "cd server && npm run test",
+    "test:client": "cd client && npm run test",
+    "lint": "npm run lint:server && npm run lint:client",
+    "lint:server": "cd server && npm run lint",
+    "lint:client": "cd client && npm run lint",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "db:migrate": "cd database && npm run migrate",
+    "db:seed": "cd database && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "hotel",
+    "booking",
+    "saas",
+    "typescript",
+    "react",
+    "node",
+    "express",
+    "postgresql"
+  ],
+  "author": "Monika Rajput",
+  "license": "MIT"
+}
